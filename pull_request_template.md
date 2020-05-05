@@ -1,8 +1,6 @@
 ## All Submissions:
 
 * [ ] Merge the target branch into the PR branch. Fix any conflicts that might appear.
-* [ ] Have you checked to ensure that other pull request are approved for merge [Pull Requests](../../../pulls)?
-* [ ] What does the PR include
 
 ### New Feature Submissions:
 
@@ -14,6 +12,7 @@
 * [ ] Have you written new tests for your core changes, as applicable?
 * [ ] Have you successfully ran tests with your changes locally?
 * [ ] All new and existing tests passed.
+* [ ] Have you run `rubocop` and fixed offenses?
 
 **Test coverage** =
 --------------------------------------------------------------------------------
