@@ -1,5 +1,7 @@
 langauge: ruby
-cache: bundler
+cache: 
+  bundler: true
+  yarn: true
 rbenv:
 - 2.5.3
 addons:
