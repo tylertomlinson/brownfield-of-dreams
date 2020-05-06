@@ -1,5 +1,4 @@
 langauge: ruby
-sudo: false
 cache:
   bundler: true
   directories:
