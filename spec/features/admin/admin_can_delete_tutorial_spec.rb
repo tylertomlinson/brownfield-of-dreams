@@ -30,5 +30,20 @@ feature "An admin can delete a tutorial" do
 
     expect(Video.where(tutorial_id: tutorial_1.id).count).to eql(5)
     expect(Video.where(tutorial_id: tutorial_2.id).count).to eql(2)
+
+    visit "/admin/dashboard"
+
+    within("#tutorial-#{tutorial_1.id}") do
+      click_link "Delete"
+    end
+
+    expect(page).to_not have_content("#{tutorial_1.id}")
+    expect(page).to_not have_content("#{tutorial_2.id}")
+
+    expect(Video.where(tutorial_id: tutorial_1.id).empty?).to eql(true)
+    expect(Video.where(tutorial_id: tutorial_2.id).empty?).to eql(false)
+
+    expect(Video.where(tutorial_id: tutorial_2.id).count).to eql(2)
+    expect(Video.where(tutorial_id: tutorial_1.id).count).to eql(0)
   end
 end
