@@ -1,4 +1,5 @@
 langauge: ruby
+sudo: false
 cache: 
   bundler: true
   yarn: true
