@@ -10,7 +10,6 @@ class User < ApplicationRecord
 
   def user_repos(size)
     all_repos = GithubService.new.repos(github_token)
-    # require "pry"; binding.pry
     all_repos.sample(size)
   end
 end
