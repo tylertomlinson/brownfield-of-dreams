@@ -12,7 +12,7 @@
       <h3>GitHub Repos</h3>
         <% @repos.each do |repo| %>
           <section class="repos">
-            <%= link_to  repo[:name], repo[:html_url] %>
+            <%= link_to  repo.name, repo.html_url %>
           </section>
         <% end %>
       <h1>Bookmarked Segments</h1>
