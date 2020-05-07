@@ -7,4 +7,10 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   enum role: { default: 0, admin: 1 }
   has_secure_password
+
+  def user_repos
+    all_repos = GithubService.new.repos(github_token)
+    # require "pry"; binding.pry
+    all_repos.sample(5)
+  end
 end
