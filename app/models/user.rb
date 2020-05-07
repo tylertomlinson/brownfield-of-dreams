@@ -12,4 +12,8 @@ class User < ApplicationRecord
     all_repos = GithubService.new.repos(github_token)
     all_repos.sample(size)
   end
+
+  def github_user?
+    github_token != nil
+  end
 end
