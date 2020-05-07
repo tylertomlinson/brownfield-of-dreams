@@ -1,11 +1,14 @@
 require 'rails_helper'
 
 feature "An admin can delete a tutorial" do
-  scenario "and it should no longer exist" do
+  before(:each) do
     admin = create(:admin)
-    create_list(:tutorial, 2)
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(admin)
+  end
+
+  it "deleting tutorial" do
+    create_list(:tutorial, 2)
 
     visit "/admin/dashboard"
 
@@ -16,5 +19,31 @@ feature "An admin can delete a tutorial" do
     end
 
     expect(page).to have_css('.admin-tutorial-card', count: 1)
+  end
+
+  it "video associated to tutorial is also deleted" do
+    tutorial_1 = create(:tutorial)
+    create_list(:video, 5, tutorial: tutorial_1)
+
+    tutorial_2 = create(:tutorial)
+    create_list(:video, 2, tutorial: tutorial_2)
+
+    expect(Video.where(tutorial_id: tutorial_1.id).count).to eql(5)
+    expect(Video.where(tutorial_id: tutorial_2.id).count).to eql(2)
+
+    visit "/admin/dashboard"
+
+    within("#tutorial-#{tutorial_1.id}") do
+      click_link "Delete"
+    end
+
+    expect(page).to_not have_content("#{tutorial_1.id}")
+    expect(page).to_not have_content("#{tutorial_2.id}")
+
+    expect(Video.where(tutorial_id: tutorial_1.id).empty?).to eql(true)
+    expect(Video.where(tutorial_id: tutorial_2.id).empty?).to eql(false)
+
+    expect(Video.where(tutorial_id: tutorial_2.id).count).to eql(2)
+    expect(Video.where(tutorial_id: tutorial_1.id).count).to eql(0)
   end
 end

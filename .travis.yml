@@ -1,4 +1,9 @@
 langauge: ruby
+sudo: false
+cache:
+  bundler: true
+  directories:
+  - node_modules
 rbenv:
 - 2.5.3
 addons:
