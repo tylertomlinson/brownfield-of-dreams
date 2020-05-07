@@ -9,11 +9,11 @@
   </ul>
   <section>
     <h3>GitHub Repos</h3>
-    <section class= "repos">
-    <% @repos.each do |repo| %>
-      <%= link_to  repo[:name], repo[:html_url] %>
-    <% end %>
-    </section>
+      <% @repos.each do |repo| %>
+        <section class="repos">
+          <%= link_to  repo[:name], repo[:html_url] %>
+        </section>
+      <% end %>
     <h1>Bookmarked Segments</h1>
   </section>
 </section>
