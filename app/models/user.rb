@@ -9,7 +9,10 @@ class User < ApplicationRecord
   has_secure_password
 
   def user_repos(size)
-    all_repos = GithubService.new.repos(github_token)
+    all_repos = GithubService.new.repos(github_token).map do |info|
+      Repo.new(info)
+    end 
     all_repos.sample(size)
   end
+
 end
