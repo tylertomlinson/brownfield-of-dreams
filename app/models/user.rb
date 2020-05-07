@@ -8,9 +8,9 @@ class User < ApplicationRecord
   enum role: { default: 0, admin: 1 }
   has_secure_password
 
-  def user_repos
+  def user_repos(size)
     all_repos = GithubService.new.repos(github_token)
     # require "pry"; binding.pry
-    all_repos.sample(5)
+    all_repos.sample(size)
   end
 end
