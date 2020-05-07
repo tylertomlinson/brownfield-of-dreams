@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
 
   def show
-    @repos = current_user.user_repos if github_user
-    # require "pry"; binding.pry
+    @repos = current_user.user_repos if github_user?
+    require "pry"; binding.pry
   end
 
   def new
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
 
   private
 
-  def github_user
+  def github_user?
     current_user.github_token != nil
   end
 

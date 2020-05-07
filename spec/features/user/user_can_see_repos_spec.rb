@@ -10,6 +10,5 @@ describe "As a logged in user" do
     visit dashboard_path
 
     expect(page).to have_css(".repos", count: 5)
-
   end
 end
