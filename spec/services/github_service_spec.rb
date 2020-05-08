@@ -4,7 +4,7 @@ RSpec.describe 'GithubService' do
   it 'exists' do
     service = GithubService.new
 
-    expect(service).to be_a GithubService
+    expect(service).to be_an_instance_of(GithubService)
   end
 
   it 'can import data' do
