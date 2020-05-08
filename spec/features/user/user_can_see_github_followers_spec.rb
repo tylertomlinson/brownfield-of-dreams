@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'As a logged in user' do
-  it 'can see Github section with 5 repos including links' do
+RSpec.describe 'As a logged in user' do
+  it 'user can see all of their github followers' do
 
     user = create(:user)
 
@@ -9,11 +9,11 @@ describe 'As a logged in user' do
 
     visit dashboard_path
 
-    expect(page).to have_content('Github Repos')
-    expect(page).to have_css('.repos', count: 5)
+    expect(page).to have_content('Followers')
+    expect(page).to have_css('.followers', minimum: 10)
   end
 
-  it 'no token no github' do
+  it 'no token no followers' do
 
     user_1 = create(:user, github_token: nil )
 
@@ -22,5 +22,6 @@ describe 'As a logged in user' do
     visit dashboard_path
 
     expect(page).to_not have_content('Github Repos')
+    expect(page).to_not have_content('Followers')
   end
 end
