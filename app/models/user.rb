@@ -14,11 +14,13 @@ class User < ApplicationRecord
     end
     all_repos.sample(size)
   end
-
   def followers
     GithubService.new.followers.map do |info|
       Follower.new(info)
     end
   end
 
+  def github_user?
+    github_token != nil
+  end
 end

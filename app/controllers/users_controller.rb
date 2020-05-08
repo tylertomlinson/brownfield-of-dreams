@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  def show
-    
-  end
+  def show; end
 
   def new
     @user = User.new
@@ -19,10 +17,6 @@ class UsersController < ApplicationController
   end
 
   private
-
-  def github_user?
-    current_user.github_token != nil
-  end
 
   def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :password)
