@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a logged in user' do
-  it 'can see Github section with 5 repos including links' do
+  it 'can see GitHub section with 5 repos including links' do
 
     user = create(:user)
 
@@ -9,7 +9,7 @@ describe 'As a logged in user' do
 
     visit dashboard_path
 
-    expect(page).to have_content('Github Repos')
+    expect(page).to have_content('GitHub Repos')
     expect(page).to have_css('.repos', count: 5)
   end
 
@@ -21,6 +21,6 @@ describe 'As a logged in user' do
 
     visit dashboard_path
 
-    expect(page).to_not have_content('Github Repos')
+    expect(page).to_not have_content('GitHub Repos')
   end
 end

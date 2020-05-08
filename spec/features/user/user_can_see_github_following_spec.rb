@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'As a logged in user' do
-  it 'user can see their gihub following' do
+  it 'user can see their GitHub following' do
 
     user = create(:user)
 
@@ -21,7 +21,7 @@ RSpec.describe 'As a logged in user' do
 
     visit dashboard_path
 
-    expect(page).to_not have_content('Github Repos')
+    expect(page).to_not have_content('GitHub Repos')
     expect(page).to_not have_content('Followers')
     expect(page).to_not have_content('Following')
   end
