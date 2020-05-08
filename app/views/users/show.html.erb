@@ -9,12 +9,18 @@
   </ul>
   <% if current_user.github_user? %>
     <section>
-      <h3>GitHub Repos</h3>
+      <h3>Github Repos</h3>
         <% current_user.user_repos(5).each do |repo| %>
           <section class="repos">
             <%= link_to  repo.name, repo.html_url %>
           </section>
         <% end %>
+      <h3>Followers</h3>
+       <% current_user.followers.each do |follower| %>
+        <section class="followers">
+        <%= link_to follower.login, follower.html_url %>
+        </section>
+       <% end %>
       <h1>Bookmarked Segments</h1>
     </section>
   <% end %>
