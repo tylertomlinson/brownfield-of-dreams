@@ -1,4 +1,4 @@
-class Follower
+class GitHubUser
   attr_reader :login, :html_url
 
   def initialize(info)

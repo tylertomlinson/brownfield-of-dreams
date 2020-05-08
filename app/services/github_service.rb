@@ -9,6 +9,11 @@ class GithubService
     parse_it(response)
   end
 
+  def following(github_token)
+    response = conn(github_token).get('user/following')
+    parse_it(response)
+  end
+
   private
 
   def conn(github_token)

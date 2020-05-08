@@ -17,7 +17,13 @@ class User < ApplicationRecord
 
   def followers
     GithubService.new.followers(github_token).map do |info|
-      Follower.new(info)
+      GitHubUser.new(info)
+    end
+  end
+
+  def following
+    GithubService.new.following(github_token).map do |info|
+      GitHubUser.new(info)
     end
   end
 
