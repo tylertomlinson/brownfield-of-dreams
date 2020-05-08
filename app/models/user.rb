@@ -21,6 +21,12 @@ class User < ApplicationRecord
     end
   end
 
+  def following
+    GithubService.new.following(github_token).map do |info|
+      Following.new(info)
+    end
+  end
+
   def github_user?
     github_token != nil
   end
