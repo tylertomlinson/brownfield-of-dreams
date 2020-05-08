@@ -9,7 +9,7 @@
   </ul>
   <% if github_user? %>
     <section>
-      <h3>GitHub Repos</h3>
+      <h3>Github Repos</h3>
         <% @repos.each do |repo| %>
           <section class="repos">
             <%= link_to  repo.name, repo.html_url %>
