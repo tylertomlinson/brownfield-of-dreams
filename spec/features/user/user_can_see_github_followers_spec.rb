@@ -10,7 +10,7 @@ RSpec.describe 'As a logged in user' do
     visit dashboard_path
 
     expect(page).to have_content('Followers')
-    expect(page).to have_css('.followers', count: 10)
+    expect(page).to have_css('.followers', minimum: 10)
   end
 
   it 'no token no followers' do
