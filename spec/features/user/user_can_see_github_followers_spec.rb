@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'As a logged in user' do
   it 'user can see all of their github followers' do
 
-    user = create(:user, github_token: ENV['AUTHORIZATION'])
+    user = create(:user)
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
