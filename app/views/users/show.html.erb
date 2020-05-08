@@ -21,6 +21,12 @@
         <%= link_to follower.login, follower.html_url %>
         </section>
        <% end %>
+       <h3>Following</h3>
+         <% current_user.following.each do |following| %>
+         <section class='following'>
+           <%= link_to following.login, following.html_url %>
+         </section>
+         <% end %>
       <h1>Bookmarked Segments</h1>
     </section>
   <% end %>
