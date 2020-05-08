@@ -11,8 +11,14 @@ class User < ApplicationRecord
   def user_repos(size)
     all_repos = GithubService.new.repos(github_token).map do |info|
       Repo.new(info)
-    end 
+    end
     all_repos.sample(size)
+  end
+
+  def followers
+    GithubService.new.followers.map do |info|
+      Follower.new(info)
+    end
   end
 
 end

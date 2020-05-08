@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    @repos = current_user.user_repos(5) if github_user?
+    
   end
 
   def new

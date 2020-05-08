@@ -4,6 +4,10 @@ class GithubService
     parse_it(response)
   end
 
+  def followers(github_token)
+    response = conn(github_token).get('user/followers')
+    parse_it(response)
+  end
 
   private
 
