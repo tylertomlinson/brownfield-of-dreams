@@ -15,7 +15,6 @@ class SessionsController < ApplicationController
   end
 
   def update
-    # require "pry"; binding.pry
     current_user.link_github_account(request.env['omniauth.auth'])
     redirect_to dashboard_path
   end
