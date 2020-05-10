@@ -29,5 +29,7 @@
          <% end %>
       <h1>Bookmarked Segments</h1>
     </section>
+  <% else %>
+    <%= button_to 'Connect to GitHub', 'auth/github', class: "btn btn-primary mb1 bg-teal"  %>
   <% end %>
 </section>
