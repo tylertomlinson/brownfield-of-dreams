@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'As a logged in user' do
-  it 'user can see their GitHub following' do
+  it 'user can see their GitHub following', :vcr do
 
     user = create(:user)
 

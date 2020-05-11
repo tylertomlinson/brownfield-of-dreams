@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe 'As a logged in user' do
-  it 'user can see all of their GitHub followers' do
-
+  it 'user can see all of their GitHub followers', :vcr do
+    
     user = create(:user)
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
