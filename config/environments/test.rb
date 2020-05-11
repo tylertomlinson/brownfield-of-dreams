@@ -53,4 +53,6 @@ Rails.application.configure do
       'secret' => 'mock_secret'
     }
     })
-  end
+
+  Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:github]
+end
