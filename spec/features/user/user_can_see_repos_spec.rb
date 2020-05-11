@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a logged in user' do
-  it 'can see GitHub section with 5 repos including links' do
+  it 'can see GitHub section with 5 repos including links', :vcr do
 
     user = create(:user)
 
