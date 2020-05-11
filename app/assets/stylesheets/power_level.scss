@@ -1,0 +1,35 @@
+.yoda {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.yoda {
+  width: 700px;
+  height: 700px;
+}
+
+.explore {
+  text-align: center;
+  text-shadow: 2px 2px 5px blue;
+  color: white;
+}
+
+.explore {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: relative;
+  align: center;
+  animation: myfirst 20s linear 2s infinite alternate;
+}
+
+@keyframes myfirst {
+  0%   {background-color:lightblue; left:0px; top:0px;}
+  25%  {background-color:blue; left:400px; top:0px;}
+  50%  {background-color:lightblue; left:1300px; top:200px;}
+  75%  {background-color:blue; left:0px; top:200px;}
+  75%  {background-color:lightblue; left:200px; top:400px;}
+  100% {background-color:blue; left:0px; top:0px;}
+}
