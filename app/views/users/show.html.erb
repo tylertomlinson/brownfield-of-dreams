@@ -8,7 +8,13 @@
     <h5>Email: </h5>
     <%= current_user.email%>
     <h5>Created on: </h5>
-    <%= current_user.created_at.strftime("%m-%d-%Y") %>
+    <%= current_user.created_at.strftime("%m-%d-%Y") %><br>
+    <h5>Current User Power Level: 3</h5>
+   <div class="progress-container"><progress max="100" value="70">
+   </progress>
+   </div><br>
+  <%= link_to "power level?", power_level_path %>
+   <br><br>
     <% if current_user.github_user? %>
     <section>
       <h3>GitHub Repos</h3>
