@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
   get '/login', to: "sessions#new"
   post '/login', to: "sessions#create"
+  get '/auth/:provider/callback', to: "sessions#update"
   delete '/logout', to: "sessions#destroy"
 
   get '/dashboard', to: 'users#show'
@@ -40,6 +41,6 @@ Rails.application.routes.draw do
   resources :tutorials, only: [:show, :index] do
     resources :videos, only: [:show, :index]
   end
-
+  
   resources :user_videos, only:[:create, :destroy]
 end
