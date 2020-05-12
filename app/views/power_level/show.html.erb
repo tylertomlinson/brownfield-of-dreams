@@ -2,12 +2,8 @@
 <div class= "header">
   <%= link_to "Back to Dashboard", dashboard_path, class: "mt2 btn btn-primary mb1 bg-teal"%>
 
-<div class= "yodaimage">
-<img id="image" class="hidden" src="https://i.imgur.com/Uv4ogC8.jpg" />
-</div>
-
 <div class= "unleash">
-<button onclick="move()">Unleash the Power </button>
+<button class= "btn1" onclick="move()">Unleash the Power </button>
 </div>
 
 <h1>Power Meter</h1>
@@ -15,18 +11,20 @@
 <div id="myProgress">
   <div id="myBar">0%</div>
 </div>
-<br><br>
+<br>
 
 <div class= "yoda">
-<button id="button">Final Step</button>
+<button id="button" class="hidden">Final Step</button>
 </div>
 
-<br><br><br><br>
+<div class= "yodaimage">
+<img id="image" class="hidden" src="https://i.imgur.com/Uv4ogC8.jpg" />
+</div>
 
-<div class ="explore">
+<!-- <div class ="explore">
 <br>
   The power is Near!
-</div>
+</div> -->
 
 </div>
 
@@ -59,5 +57,13 @@ function toggleImage() {
 
 let button = document.getElementById('button')
 button.addEventListener('click', toggleImage)
+
+document.querySelector('.hidden').style.display = 'none';
+document.querySelector('.btn1').addEventListener('click', showBtn);
+
+function showBtn(e) {
+ document.querySelector('.hidden').style.display = 'inline-block';
+ e.preventDefault();
+}
 
 </script>
