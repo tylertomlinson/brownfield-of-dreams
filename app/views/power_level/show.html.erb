@@ -1,14 +1,63 @@
+
+<div class= "header">
+  <%= link_to "Back to Dashboard", dashboard_path, class: "mt2 btn btn-primary mb1 bg-teal"%>
+
+<div class= "yodaimage">
+<img id="image" class="hidden" src="https://i.imgur.com/Uv4ogC8.jpg" />
+</div>
+
+<div class= "unleash">
+<button onclick="move()">Unleash the Power </button>
+</div>
+
+<h1>Power Meter</h1>
+
+<div id="myProgress">
+  <div id="myBar">0%</div>
+</div>
+<br><br>
+
+<div class= "yoda">
+<button id="button">Final Step</button>
+</div>
+
+<br><br><br><br>
+
 <div class ="explore">
 <br>
-  Explore To Discover!
+  The power is Near!
 </div>
-<div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
-<img src= "https://i.imgur.com/Uv4ogC8.jpg" class="yoda">
 
-<!-- <img src= "https://i.imgur.com/iJF3b0r.png" class="yoda"> -->
+</div>
+
+<script>
+
+let i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    let elem = document.getElementById("myBar");
+    let width = 10;
+    let id = setInterval(frame, 20 );
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width  + "%";
+      }
+    }
+  }
+}
+
+function toggleImage() {
+  let image = document.getElementById('image');
+  image.classList.toggle('hidden');
+}
+
+let button = document.getElementById('button')
+button.addEventListener('click', toggleImage)
+
+</script>
