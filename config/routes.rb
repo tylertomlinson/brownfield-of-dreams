@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   get '/about', to: 'about#show'
   get '/get_started', to: 'get_started#show'
 
+  get '/power_level', to: 'power_level#show'
+
   # Is this being used?
   get '/video', to: 'video#show'
 
@@ -41,6 +43,6 @@ Rails.application.routes.draw do
   resources :tutorials, only: [:show, :index] do
     resources :videos, only: [:show, :index]
   end
-  
+
   resources :user_videos, only:[:create, :destroy]
 end

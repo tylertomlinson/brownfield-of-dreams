@@ -1,0 +1,72 @@
+.explore {
+  text-align: center;
+  text-shadow: 2px 2px 5px blue;
+  color: white;
+}
+
+.explore {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  position: relative;
+  align: center;
+  animation: myfirst 25s linear 1s;
+}
+
+@keyframes myfirst {
+  0%   {background-color:lightblue; left:0px; top:0px;}
+  25%  {background-color:blue; left:300px; top:0px;}
+  50%  {background-color:lightblue; left:1300px; top:0px;}
+  75%  {background-color:blue; left:300px; top:0px;}
+  100% {background-color:lightblue; left:0px; top:0px;}
+}
+
+.unleash {
+  text-align: center;
+}
+
+.yoda {
+  text-align: center;
+}
+
+.unleash button {
+  color: white;
+  background-color: green;
+}
+
+.hidden {
+  display: none;
+  position: inline-block;
+}
+
+.yodaimage {
+  height: 400px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.yodaimage img{
+  z-index: 1;
+}
+
+#myProgress {
+  width: 100%;
+  background-color: #ddd;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+.header h1 {
+  text-align: center;
+  font-weight: bold;
+}
