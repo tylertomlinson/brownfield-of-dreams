@@ -35,6 +35,9 @@ Rails.application.routes.draw do
 
   get '/power_level', to: 'power_level#show'
 
+  get "/invite", to: 'invite#new'
+  post "/invite/create", to: 'invite#create'
+
   # Is this being used?
   get '/video', to: 'video#show'
 
