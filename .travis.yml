@@ -21,5 +21,5 @@ deploy:
   provider: heroku
   api_key:
     secure: HLqZaNYT/LtGJVdvC4DnWEgQI+yxfg3aeX/xTCO4z53d1o/4IqY8Fj+AOtB/9GpHyK2RyXwB4ltIqzsU6ZaO6bBas/NTYNXiux5xzmU6dlaydzxIE73oFEtDKCut49y9eQwnjkLDtXANcBVGsOA+q71ZMuwqdCn8n8pfc2SdGBMAD+hpI6ejvZMBbGVIlp6q2Q7vBR1c8B3Z+W3CviL6oyywzDJauEu9rx+pY4xIKO1yVq5IcuBwb90aijwsQnf1Jkl/5ZLjVRcXi6/FFMefHtqY4Kf/3rp2ZgB9afRIHCZVuy98ZhZThf/Rc3DKx9J2aLFtNrOXkWCtB1B82/JYpTGh5nx46GLkcGp0vgBBgfpZja53972DlkTVRl5ezswd9W225mRLfBhxevJMqBFDrOJT5LB9O6PX2dRORyW53zusYQ0tMRsBWH+AgoLQjSMRvafPQ5ftJcsHlwnJzoHSpeMDP1eRApNV9kb+9GPR+FX/IH8jNiDTvs3bkEUxtN+5ZAleb8gLPdOJfpW6mRTbQbjJdi4v7C8TgeDDbB/tY9bvhwyTAH0AsAZuROAbklnSuODp61+26NYIiX4xF1rPG53q//EuBGMpNFZUb+o2uEWPDIMPHtUr48bStHZj94639T2MCxcH99xAc0Qz43Nxb8NM0zTkuXXZahpvsRcXGMs=
-  app: brownfield-paired-tt-eh
+  app: field-of-dreams-tt
   run: rails db:migrate
