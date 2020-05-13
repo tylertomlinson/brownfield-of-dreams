@@ -11,8 +11,8 @@ addons:
   chrome: stable
 dist: xenial
 before_install:
-  - yes | gem update --system --force
-  - gem install bundler
+- yes | gem update --system --force
+- gem install bundler
 script:
 - yarn
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
@@ -20,6 +20,6 @@ script:
 deploy:
   provider: heroku
   api_key:
-    secure: MwNECR/qjl/fhIrcsHpYsD1jyv17HMhKXoq7jGC1aLoKV898y4aS5mrmbvTFQ10pxRf6+v2NSgNArCt0TVAjIyQH4kwxoUrBd9dZACphHkMgfT27CEDXQUluCpRxT5bBClgBpXTKdgjHqdnTZ2ilOJjp0vLr+Urg/MAvTtIeLlVwGWD748+hGD4TXIl/pRyTFmn6M9js4I6aG1qxe7brkrV3u0diIpOqKWXZhM9MyVvvat8ziYs0PbV4rNUVsich6j2SqQJwEiNYZH+HpaJg0+gjkKpL8vrWIgYjCU5+JX58mOO7Ek6YRqs/2WyaDG9IRwRwcxN9lCq2FSKYWMwHLtCqbsFKGbMmhcubVZzgRbzdRldfJ2FTZKt3xFMxOT/EdriC/of2Gh87H5MSx/LyudMq24OEYz4TXAR1wsPRhcZLYsCkFN+v17dKeXNwi6VyWhBcZHEv2nmkaV8FcDksdK0irXpOM/y/WSuTJD96TPURhB/Q3iR5wtwLZBA4CVnfhiNb3a0yuMloZs+lnjTregWtibNvMv7lezorJgVw7mxWXMa9eVzO1Ji1aJ0lEVOIFUOrADHOoU5LRC7hJdkJzaUBdpPXUttfvqu9I3E43Mf8nm2PSEEsOJFToCM9GcfuGdYFWXbKoxQoDbtU8lAomH7W7hEtIWb5rWDxeAkd6jU=
+    secure: HLqZaNYT/LtGJVdvC4DnWEgQI+yxfg3aeX/xTCO4z53d1o/4IqY8Fj+AOtB/9GpHyK2RyXwB4ltIqzsU6ZaO6bBas/NTYNXiux5xzmU6dlaydzxIE73oFEtDKCut49y9eQwnjkLDtXANcBVGsOA+q71ZMuwqdCn8n8pfc2SdGBMAD+hpI6ejvZMBbGVIlp6q2Q7vBR1c8B3Z+W3CviL6oyywzDJauEu9rx+pY4xIKO1yVq5IcuBwb90aijwsQnf1Jkl/5ZLjVRcXi6/FFMefHtqY4Kf/3rp2ZgB9afRIHCZVuy98ZhZThf/Rc3DKx9J2aLFtNrOXkWCtB1B82/JYpTGh5nx46GLkcGp0vgBBgfpZja53972DlkTVRl5ezswd9W225mRLfBhxevJMqBFDrOJT5LB9O6PX2dRORyW53zusYQ0tMRsBWH+AgoLQjSMRvafPQ5ftJcsHlwnJzoHSpeMDP1eRApNV9kb+9GPR+FX/IH8jNiDTvs3bkEUxtN+5ZAleb8gLPdOJfpW6mRTbQbjJdi4v7C8TgeDDbB/tY9bvhwyTAH0AsAZuROAbklnSuODp61+26NYIiX4xF1rPG53q//EuBGMpNFZUb+o2uEWPDIMPHtUr48bStHZj94639T2MCxcH99xAc0Qz43Nxb8NM0zTkuXXZahpvsRcXGMs=
   app: brownfield-paired-tt-eh
   run: rails db:migrate
