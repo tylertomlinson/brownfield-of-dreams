@@ -1,3 +1,3 @@
-class PowerLevelController < ApplicationController 
+class PowerLevelController < ApplicationController
   def show; end
 end
