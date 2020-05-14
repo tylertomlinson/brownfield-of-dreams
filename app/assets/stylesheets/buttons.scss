@@ -36,3 +36,52 @@
   visibility: visible;
   opacity: 1;
 }
+
+.repobtn {
+	box-shadow: 9px 4px 23px 5px #05c2d1;
+	background-color:#05c2d1;
+	border-radius:0px;
+	border:4px solid #0396a1;
+	display:inline-block;
+	cursor:pointer;
+	color: #FFF;
+	font-size:17px;
+	padding:7px 7px;
+}
+
+.repobtn:hover {
+	background-color:#0396a1;
+}
+
+.btn1 {
+  color: white;
+  font-weight: bold;
+  background-color: #05c2d1;
+}
+
+.btn1:hover {
+  background-color: #0396a1;
+  cursor: pointer;
+}
+
+.btn2 {
+  color: white;
+  font-weight: bold;
+  background-color: #05c2d1;
+}
+
+.btn2:hover {
+  background-color: #0396a1;
+  cursor: pointer;
+}
+
+.btn3 {
+  color: white;
+  font-weight: bold;
+  background-color: #05c2d1;
+}
+
+.btn3:hover {
+  background-color: #0396a1;
+  cursor: pointer;
+}
