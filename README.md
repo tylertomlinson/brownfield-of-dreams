@@ -19,7 +19,7 @@ A visitor is able to see all of the content on the application but in order to b
 ## Getting Started 
 
 ### Prerequisites
-```ruby
+```javascript
 $ brew install ruby -2.5.3
 $ gem install rails -5.2.0
 ``` 
@@ -27,31 +27,31 @@ $ gem install rails -5.2.0
 ### Installing
 
 #### Clone repository:
-```ruby
+```javascript
 $ git clone git@github.com:tylertomlinson/brownfield-of-dreams.git
 ```
 #### Navigate into directory:
-```ruby
+```shell
 $ cd brownfield-of-dreams
 ```
 #### Install gems:
-```ruby
+```shell
 $ bundle install
 ```
 
 #### Install node packages for stimulus
-```ruby
+```shell
 $ brew install node
 $ brew install yarn
 $ yarn
 ```
 
 #### Configure databases:
-```ruby
+```shell
 $ rake db:{create,migrate,seed}
 ```
 #### Fire up local server: (http://localhost:3000)
-```ruby
+```shell
 $ rails s
 ```
 
@@ -68,7 +68,7 @@ Once you have obtained an API key and enabled the API:
 1. Append the following to that file: `YOUTUBE_API_KEY: <your api key>`, `replacing <your api key>` with the api key you just obtained.
 
 #### Run test suite:
-```ruby
+```shell
 $ bundle exec rspec
 ```
 
